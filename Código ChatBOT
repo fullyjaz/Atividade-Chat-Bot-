@@ -1,0 +1,272 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+class Essen
+{
+    public:
+
+    int Menu()
+    {
+        int option;
+        cout << "Waehlen Sie mal eine Option aus ! "<< endl << endl;
+        cout << "1 fuer Pizza !" << endl << "2 fuer Lasagna !" << endl << "3 fuer Pasta !" << endl;
+        cout << "Option eingeben: ";
+        cin >> option;
+        switch(option) 
+        {
+            case 1: {
+                system("cls");
+                Bestellungvon_Pizza();
+                break;
+            }
+            case 2: {
+                system("cls");
+                Bestellungvon_Lasagna();
+                break;
+            }
+            case 3:
+            {
+                system("cls");
+                Bestellungvon_Pasta();
+                break;
+            }
+             default:
+                cout << "Ungültige Option! Versuche es erneut." << endl;
+        }
+    }
+    void Bestellungvon_Pizza()
+    {
+       int option;
+       float pricePizza[5];
+       int QtyPizza;
+       for (int i = 1; i < 6; i++)
+       {
+         pricePizza[i-1] = i * 4.88;
+       }
+       do {
+        cout << "\n--- Bestellen Sie die Pizzasorte die es ihnen schmeckt ---" << endl;
+        cout << "1 - Peperonni (" << pricePizza[0] << "€)" << endl;
+        cout << "2 - Salami (" << pricePizza[1] << "€)" << endl;
+        cout << "3 - Hawaii (" << pricePizza[2] << "€)" << endl;
+        cout << "4 - Quattro Formaggi (" << pricePizza[3] << "€)" << endl;
+        cout << "5 - Funghi (" << pricePizza[4] << "€)"  << endl;
+        cout << "0 - Bestellung abschließen" << endl;
+        cout << "Wähle ein Gericht: ";
+        cin >> option;
+
+        switch(option) 
+        {
+            case 1: {
+                cout << "Wie viele Wollen Sie? ";
+                cin >> QtyPizza;
+                QtyPizza += QtyPizza;
+                break;
+            }
+            case 2: {
+                cout << "Wie viele Wollen Sie? ";
+                cin >> QtyPizza;
+                QtyPizza += QtyPizza;
+                break;
+            }
+            case 3:
+            {
+                cout << "Wie viele Wollen Sie? ";
+                cin >> QtyPizza;
+                QtyPizza += QtyPizza;
+                break;
+            }
+            case 4:
+            {
+                cout << "Wie viele Wollen Sie? ";
+                cin >> QtyPizza;
+                QtyPizza += QtyPizza;
+                break;
+            }
+            case 5:
+            {
+                cout << "Wie viele Wollen Sie? ";
+                cin >> QtyPizza;
+                QtyPizza += QtyPizza;
+                break;
+            }
+            case 0:
+                cout << "Bestellung wird abgeschlossen..." << endl;
+                break;
+
+            default:
+                cout << "Ungültige Option! Versuche es erneut." << endl;
+        }
+
+    }while (option != 0);
+
+        double total = QtyPizza * pricePizza[option-1];
+
+        cout << "\n--- Zusammenfassung ---" << endl;
+        cout << " Sie muessen " << total << "  zahlen." << endl;
+       
+   } 
+
+   void Bestellungvon_Lasagna()
+    {
+       int option;
+       float priceLasagna[5];
+       int Qtylasagna;
+       for (int i = 1; i < 6; i++)
+       {
+         priceLasagna[i-1] = i * 4.28;
+       }
+       do {
+        cout << "\n--- Bestellen Sie die Lasagnasorte die es ihnen schmeckt ---" << endl;
+        cout << "1 - Lasagne alla Bolognese (" << priceLasagna[0] << "€)" << endl;
+        cout << "2 - Lasagne al Forno (" << priceLasagna[1] << "€)" << endl;
+        cout << "3 - Lasagne ai Quattro Formaggi (" << priceLasagna[2] << "€)" << endl;
+        cout << "4 - Lasagne mit Spinat & Ricotta (" << priceLasagna[3] << "€)" << endl;
+        cout << "5 - Lasagne mit Hackfleisch(" << priceLasagna[4] << "€)" << endl;
+        cout << "0 - Bestellung abschließen" << endl;
+        cout << "Wähle ein Gericht: ";
+        cin >> option;
+
+        switch(option) {
+            case 1: {
+                std::cout << "Wie viele Wollen Sie? ";
+                cin >> Qtylasagna;
+                Qtylasagna += Qtylasagna;
+                break;
+            }
+            case 2: {
+                cout << "Wie viele Wollen Sie? ";
+                cin >> Qtylasagna;
+                Qtylasagna += Qtylasagna;
+                break;
+            }
+            case 3:
+            {
+                cout << "Wie viele Wollen Sie? ";
+                cin >> Qtylasagna;
+                Qtylasagna += Qtylasagna;
+                break;
+            }
+            case 4:
+            {
+                cout << "Wie viele Wollen Sie? ";
+                cin >> Qtylasagna;
+                Qtylasagna += Qtylasagna;
+                break;
+            }
+            case 5:
+            {
+                cout << "Wie viele Wollen Sie? ";
+                cin >> Qtylasagna;
+                Qtylasagna += Qtylasagna;
+                break;
+            }
+            case 0:
+                cout << "Bestellung wird abgeschlossen..." << endl;
+                break;
+
+            default:
+                cout << "Ungültige Option! Versuche es erneut." << endl;
+        }
+
+    }while (option != 0);
+
+        double total = Qtylasagna * priceLasagna[option -1];
+
+        cout << "\n--- Zusammenfassung ---" << endl;
+        cout << " Sie muessen " << total << "  zahlen." << endl;
+       
+   } 
+    
+   void Bestellungvon_Pasta()
+    {
+       int option;
+       float pricePasta[5];
+       int Qtypasta;
+       for (int i = 1; i < 6; i++)
+       {
+         pricePasta[i-1] = i * 4.93;
+       }
+       do {
+        cout << "\n--- Bestellen Sie die Lasagnasorte die es ihnen schmeckt ---" << std::endl;
+        cout << "1 - Spaghetti (" << pricePasta[0] << "€)" << std::endl;
+        cout << "2 - Bucatini (" << pricePasta[1] << "€)" << std::endl;
+        cout << "3 - Linguine (" << pricePasta[2] << "€)" << std::endl;
+        cout << "4 - Fettuccine (" << pricePasta[3] << "€)" << std::endl;
+        cout << "5 - Tagliatelle(" << pricePasta[4] << "€)"<< std::endl;
+        cout << "0 - Bestellung abschließen" << std::endl;
+        cout << "Wähle ein Gericht: ";
+        cin >> option;
+
+        switch(option) {
+            case 1: {
+                std::cout << "Wie viele Wollen Sie? ";
+                cin >> Qtypasta;
+                Qtypasta += Qtypasta;
+                break;
+            }
+            case 2: {
+                cout << "Wie viele Wollen Sie? ";
+                cin >> Qtypasta;
+                Qtypasta += Qtypasta;
+                break;
+            }
+            case 3:
+            {
+                cout << "Wie viele Wollen Sie? ";
+                cin >> Qtypasta;
+                Qtypasta += Qtypasta;
+                break;
+            }
+            case 4:
+            {
+                cout << "Wie viele Wollen Sie? ";
+                cin >> Qtypasta;
+                Qtypasta += Qtypasta;
+                break;
+            }
+            case 5:
+            {
+                cout << "Wie viele Wollen Sie? ";
+                cin >> Qtypasta;
+                Qtypasta += Qtypasta;
+                break;
+            }
+            case 0:
+                cout << "Bestellung wird abgeschlossen..." << endl;
+                break;
+
+            default:
+                cout << "Ungültige Option! Versuche es erneut." << endl;
+        }
+
+    }while (option != 0);
+
+        double total = Qtypasta * pricePasta[option - 1];
+
+        cout << "\n--- Zusammenfassung ---" << endl;
+        cout << " Sie muessen " <<  total  <<" zahlen." << endl;
+       
+   } 
+   /*
+    private:
+    string PizzaSorten;
+    string LasagnaSorten;
+    string PastaSorten;
+    int Qty;
+    
+    */
+
+
+
+
+};
+
+int main()
+{
+    Essen *ItalienischesEssen;
+    ItalienischesEssen->Menu();
+    return 0;
+}
