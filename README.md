@@ -1,6 +1,9 @@
 Projeto ChatBOT
 
-Alunos: 
--Frederico
--Matheus Fully
--Geraldo
+Alunos:
+
+Matheus
+
+Frederico
+
+Geraldo
